@@ -4,7 +4,6 @@ import { LanguageContext } from "./layout";
 import Widget from "@/components/Widget";
 import "./globals.css";
 
-
 export default function HomePage() {
   const { t } = useContext(LanguageContext);
 
@@ -53,7 +52,7 @@ export default function HomePage() {
             </Widget>
           </div>
 
-          <div className="div2">
+          <div className="div5">
             <Widget title={t.orders}>
               <div className="orders">
                 <div className="orders-square">
@@ -75,30 +74,67 @@ export default function HomePage() {
             </Widget>
           </div>
 
-          <div className="div3">
+          <div className="div2">
             <Widget title={t.ranking}>
-              <div>
-                <p>Sort: Most Purchased</p>
-                <table>
+              <div className="widgetRanking">
+              <div className="dropdownFilter">
+                  <label htmlFor="filter">{t.filter}</label>
+                  <select id="filter">
+                    <option>{t.all}</option>
+                    <option>{t.positive}</option>
+                    <option>{t.negative}</option>
+                  </select>
+                </div>
+                <table className="reviewsTable">
                   <thead>
                     <tr>
-                      <th>{t.client}</th>
-                      <th>{t.score}</th>
-                      <th>{t.comment}</th>
+                      <th className="rev-table rev-name">{t.client}</th>
+                      <th className="rev-table rev-name">{t.score}</th>
+                      <th className="rev-table rev-name">{t.comment}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Client</td>
-                      <td>★★★★☆</td>
-                      <td>Comment</td>
+                      <td className="rev-table rev-val">Client A</td>
+                      <td className="rev-table rev-val">★★★★☆</td>
+                      <td className="rev-table rev-val">
+                        Lorem ipsum 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </Widget>
           </div>
-          <div className="div4">
+          <div className="div3">
             <Widget title={t.reviews}>
               <div className="widgetReviews">
                 <div className="dropdownFilter">
@@ -123,14 +159,35 @@ export default function HomePage() {
                       <td className="rev-table rev-val">Client A</td>
                       <td className="rev-table rev-val">★★★★☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum dolor sit amet...
+                        Lorem ipsum 
                       </td>
                     </tr>
                     <tr>
                       <td className="rev-table rev-val">Client B</td>
                       <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Not satisfied with the product...
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Not satisfied 
                       </td>
                     </tr>
                   </tbody>
@@ -138,46 +195,54 @@ export default function HomePage() {
               </div>
             </Widget>
           </div>
-          <div className="div5">
+          <div className="div4">
             <Widget title={t.salesChart}>
-              <div>
-                <div className="chart-container">
-                  <div>
-                    Measure:  <div className="dropdownFilter">
-                  <label htmlFor="filter">{t.filter}</label>
-                  <select id="filter">
-                    <option>{t.all}</option>
-                    <option>{t.positive}</option>
-                    <option>{t.negative}</option>
-                  </select>
-                </div>
-                  </div>
-                  <div>
-                    Time Range:  <div className="dropdownFilter">
-                  <label htmlFor="filter">{t.filter}</label>
-                  <select id="filter">
-                    <option>{t.all}</option>
-                    <option>{t.positive}</option>
-                    <option>{t.negative}</option>
-                  </select>
-                </div>
-                  </div>
-                  <div>
-                   Presentation:  <div className="dropdownFilter">
-                  <label htmlFor="filter">{t.filter}</label>
-                  <select id="filter">
-                    <option>{t.all}</option>
-                    <option>{t.positive}</option>
-                    <option>{t.negative}</option>
-                  </select>
-                </div>
-                  </div>
-                </div>
-                <label>
-                  <input type="checkbox" /> {t.previousData}
-                </label>
+              <div className="chart-container">
                 <div className="chart">
-                <img src="/chart.jpg" height="300"alt="Logo" />
+                  <img
+                    src="/chart.png"
+                    className="chart-image"
+                    height="250"
+                    alt="Logo"
+                  />
+                </div>
+                <div className="chart-options">
+                  <div>
+                    Measure:{" "}
+                    <div className="dropdownFilter">
+                      <label htmlFor="filter">{t.filter}</label>
+                      <select id="filter">
+                        <option>{t.all}</option>
+                        <option>{t.positive}</option>
+                        <option>{t.negative}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    Time Range:{" "}
+                    <div className="dropdownFilter">
+                      <label htmlFor="filter">{t.filter}</label>
+                      <select id="filter">
+                        <option>{t.all}</option>
+                        <option>{t.positive}</option>
+                        <option>{t.negative}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    Presentation:{" "}
+                    <div className="dropdownFilter">
+                      <label htmlFor="filter">{t.filter}</label>
+                      <select id="filter">
+                        <option>{t.all}</option>
+                        <option>{t.positive}</option>
+                        <option>{t.negative}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <label>
+                    <input type="checkbox" /> {t.previousData}
+                  </label>
                 </div>
               </div>
             </Widget>
