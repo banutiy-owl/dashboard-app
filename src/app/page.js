@@ -25,11 +25,9 @@ export default function HomePage() {
                     <p className="mid-heading quality-name category-name">
                       {t.category}
                     </p>
-                    <p className="quality-val category-val">Weak</p>
+                    <p className="quality-val category-val">Słaby</p>
                   </div>
                 </div>
-
-                <hr className="divider" />
 
                 <h4 className="mid-heading">{t.worstAspects}:</h4>
                 <table className="invisibleTable">
@@ -57,17 +55,17 @@ export default function HomePage() {
               <div className="orders">
                 <div className="orders-square">
                   <p>
-                    {t.unpaid}: <span className="orders-val">3</span>
+                    <span className="mid-heading">{t.unpaid}:</span> <span className="orders-val">3</span>
                   </p>
                 </div>
                 <div className="orders-square">
                   <p>
-                    {t.unshipped}: <span className="orders-val">5</span>
+                    <span className="mid-heading">{t.unshipped}:</span> <span className="orders-val">5</span>
                   </p>
                 </div>
                 <div className="orders-square">
                   <p>
-                    {t.returns}: <span className="orders-val">4</span>
+                    <span className="mid-heading">{t.returns}:</span> <span className="orders-val">4</span>
                   </p>
                 </div>
               </div>
@@ -78,56 +76,51 @@ export default function HomePage() {
             <Widget title={t.ranking}>
               <div className="widgetRanking">
               <div className="dropdownFilter">
-                  <label htmlFor="filter">{t.filter}</label>
+                  <label htmlFor="filter">{t.sortOffers}:</label>
                   <select id="filter">
-                    <option>{t.all}</option>
-                    <option>{t.positive}</option>
-                    <option>{t.negative}</option>
+                    <option>{t.sortMostFreqPurchased}</option>
+                    <option>{t.sortLeastFreqPurchased}</option>
                   </select>
                 </div>
-                <table className="reviewsTable">
+                <table className="rankingTable">
                   <thead>
                     <tr>
-                      <th className="rev-table rev-name">{t.client}</th>
-                      <th className="rev-table rev-name">{t.score}</th>
-                      <th className="rev-table rev-name">{t.comment}</th>
+                      <th className="rank-table rank-name">{t.name}</th>
+                      <th className="rank-table rank-name">{t.photo}</th>
+                      <th className="rank-table rank-name">{t.soldItems}</th>
+                      <th className="rank-table rank-name">{t.turnover}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="rev-table rev-val">Client A</td>
-                      <td className="rev-table rev-val">★★★★☆</td>
-                      <td className="rev-table rev-val">
-                        Lorem ipsum 
-                      </td>
+                      <td className="rank-table rank-val">Produkt A</td>
+                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">60</td>
+                      <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
+                      <td className="rank-table rank-val">Produkt A</td>
+                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">60</td>
+                      <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
+                      <td className="rank-table rank-val">Produkt A</td>
+                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">60</td>
+                      <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
+                      <td className="rank-table rank-val">Produkt A</td>
+                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">60</td>
+                      <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
+                      <td className="rank-table rank-val">Produkt A</td>
+                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">60</td>
+                      <td className="rank-table rank-val">100</td>
                     </tr>
                   </tbody>
                 </table>
@@ -137,15 +130,14 @@ export default function HomePage() {
           <div className="div3">
             <Widget title={t.reviews}>
               <div className="widgetReviews">
-                <div className="dropdownFilter">
-                  <label htmlFor="filter">{t.filter}</label>
-                  <select id="filter">
-                    <option>{t.all}</option>
-                    <option>{t.positive}</option>
-                    <option>{t.negative}</option>
-                  </select>
-                </div>
-                <h4 className="tableName">{t.reviewsTable}</h4>
+                  <div className="dropdownFilter">
+                    <label htmlFor="filter">{t.filterReviews}:</label>
+                    <select id="filter">
+                      <option>{t.all}</option>
+                      <option>{t.filterPositive}</option>
+                      <option>{t.filterNegative}</option>
+                    </select>
+                  </div>
                 <table className="reviewsTable">
                   <thead>
                     <tr>
@@ -159,35 +151,35 @@ export default function HomePage() {
                       <td className="rev-table rev-val">Client A</td>
                       <td className="rev-table rev-val">★★★★☆</td>
                       <td className="rev-table rev-val">
+                        Lorem ipsum
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
+                        Lorem ipsum
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="rev-table rev-val">Client C</td>
+                      <td className="rev-table rev-val">★★☆☆☆</td>
+                      <td className="rev-table rev-val">
                         Lorem ipsum 
                       </td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">Client D</td>
                       <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Not satisfied 
+                        Lorem ipsum 
                       </td>
                     </tr>
                     <tr>
-                      <td className="rev-table rev-val">Client B</td>
+                      <td className="rev-table rev-val">Client E</td>
                       <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
-                      <td className="rev-table rev-val">
-                        Not satisfied 
+                        Lorem ipsum 
                       </td>
                     </tr>
                   </tbody>
@@ -207,44 +199,38 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="chart-options">
-                  <div>
-                    Measure:{" "}
                     <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.filter}</label>
+                      <label htmlFor="filter">{t.chartMeasure}:</label>
                       <select id="filter">
-                        <option>{t.all}</option>
-                        <option>{t.positive}</option>
-                        <option>{t.negative}</option>
+                        <option>{t.soldItems}</option>
+                        <option>{t.turnover}</option>
                       </select>
                     </div>
-                  </div>
-                  <div>
-                    Time Range:{" "}
                     <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.filter}</label>
+                      <label htmlFor="filter">{t.chartTimePeriod}:</label>
                       <select id="filter">
-                        <option>{t.all}</option>
-                        <option>{t.positive}</option>
-                        <option>{t.negative}</option>
+                        <option>{t.today}</option>
+                        <option>{t.week}</option>
+                        <option>{t.month}</option>
                       </select>
                     </div>
-                  </div>
-                  <div>
-                    Presentation:{" "}
                     <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.filter}</label>
+                      <label htmlFor="filter">{t.chartPresentationMethod}:</label>
                       <select id="filter">
-                        <option>{t.all}</option>
-                        <option>{t.positive}</option>
-                        <option>{t.negative}</option>
+                        <option>{t.barChart}</option>
+                        <option>{t.lineChart}</option>
                       </select>
                     </div>
-                  </div>
                   <label>
                     <input type="checkbox" /> {t.previousData}
                   </label>
                 </div>
               </div>
+            </Widget>
+          </div>
+          <div className="div6">
+            <Widget title={t.widgetAdvice}>
+              <p>Wykorzystaj promocje i rabaty, aby przyciągnąć nowych klientów i zwiększyć sprzedaż.</p>
             </Widget>
           </div>
         </div>
