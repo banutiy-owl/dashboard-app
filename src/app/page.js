@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "./layout";
 import Widget from "@/components/Widget";
+import BarChart from "@/components/BarChart";
 import Stars from "@/components/Stars";
 import "./globals.css";
 
@@ -56,7 +57,7 @@ export default function HomePage() {
               <div className="orders">
                 <div className="orders-square">
                   <p>
-                    <span className="mid-heading">{t.unpaid}:</span>{" "}
+                    <span className="mid-heading">{t.unpaid}</span>{" "}
                     <span className="orders-val">3</span>
                   </p>
                 </div>
@@ -89,54 +90,70 @@ export default function HomePage() {
                 <table className="rankingTable">
                   <thead>
                     <tr>
-                      <th className="rank-table rank-name">{t.name}</th>
                       <th className="rank-table rank-name">{t.photo}</th>
+                      <th className="rank-table rank-name">{t.name}</th>
                       <th className="rank-table rank-name">{t.soldItems}</th>
                       <th className="rank-table rank-name">{t.turnover}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="rank-table rank-val">Produkt</td>
                       <td className="rank-table rank-val">
-                        {" "}
-                        <Stars />
+                        <img
+                          src={"/black_image.jpg"}
+                          alt={"Product photo"}
+                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                        />
                       </td>
+                      <td className="rank-table rank-val">Produkt A</td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt</td>
                       <td className="rank-table rank-val">
-                        {" "}
-                        <Stars />
+                        <img
+                          src={"/black_image.jpg"}
+                          alt={"Product photo"}
+                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                        />
                       </td>
+                      <td className="rank-table rank-val">Produkt A</td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt</td>
                       <td className="rank-table rank-val">
-                        <Stars />
+                        <img
+                          src={"/black_image.jpg"}
+                          alt={"Product photo"}
+                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                        />
                       </td>
+                      <td className="rank-table rank-val">Produkt A</td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt</td>
                       <td className="rank-table rank-val">
-                        {" "}
-                        <Stars />
+                        <img
+                          src={"/black_image.jpg"}
+                          alt={"Product photo"}
+                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                        />
                       </td>
+                      <td className="rank-table rank-val">Produkt A</td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt</td>
                       <td className="rank-table rank-val">
-                        {" "}
-                        <Stars />
+                        <img
+                          src={"/black_image.jpg"}
+                          alt={"Product photo"}
+                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                        />
                       </td>
+                      <td className="rank-table rank-val">Produkt A</td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
@@ -214,12 +231,7 @@ export default function HomePage() {
             <Widget title={t.salesChart}>
               <div className="chart-container">
                 <div className="chart">
-                  <img
-                    src="/chart.png"
-                    className="chart-image"
-                    height="250"
-                    alt="Logo"
-                  />
+                  <BarChart />
                 </div>
                 <div className="chart-options">
                   <div className="dropdownFilter">
