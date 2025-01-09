@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, createContext } from "react";
+import React, { useState, useEffect, createContext, useRef } from "react";
 import "./globals.css";
 
 export const LanguageContext = createContext();
@@ -46,7 +46,7 @@ const translations = {
     week: "Obecny tydzień",
     month: "Obecny miesiąc",
     barChart: "Wykres słupkowy",
-    lineChart: "Wykres kolumnowy"
+    lineChart: "Wykres kolumnowy",
   },
   EN: {
     lightTheme: "Light theme",
@@ -89,18 +89,48 @@ const translations = {
     week: "Current wekk",
     month: "Current month",
     barChart: "Bar chart",
-    lineChart: "Line chart"
+    lineChart: "Line chart",
   },
 };
 
 export default function RootLayout({ children }) {
   const [language, setLanguage] = useState("PL");
   const [theme, setTheme] = useState("light");
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const accounts = ["Account 1", "Account 2", "Account 3"];
+  const [currentAccount, setCurrentAccount] = useState("Account 1");
+  const dropdownRef = useRef(null);
 
   const toggleTheme = () =>
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   const toggleLanguage = () =>
     setLanguage((prev) => (prev === "PL" ? "EN" : "PL"));
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleAccountChange = (account) => {
+    setCurrentAccount(account);
+    setDropdownOpen(false);
+  };
+
+  const handleLogout = () => {
+    console.log("Log out");
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const t = translations[language];
 
@@ -119,6 +149,29 @@ export default function RootLayout({ children }) {
               <button onClick={toggleLanguage}>
                 {language === "PL" ? "EN" : "PL"}
               </button>
+              <div className="dropdown" ref={dropdownRef}>
+                <button
+                  onClick={handleDropdownToggle}
+                  className="dropdown-toggle"
+                >
+                  {currentAccount} ▼
+                </button>
+                {isDropdownOpen && (
+                  <ul className="dropdown-menu">
+                    {accounts.map((account, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleAccountChange(account)}
+                      >
+                        {account}
+                      </li>
+                    ))}
+                    <li className="logout" onClick={handleLogout}>
+                      Logout
+                    </li>
+                  </ul>
+                )}
+              </div>
             </div>
           </header>
           {children}

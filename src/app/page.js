@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "./layout";
 import Widget from "@/components/Widget";
+import Stars from "@/components/Stars";
 import "./globals.css";
 
 export default function HomePage() {
@@ -55,17 +56,20 @@ export default function HomePage() {
               <div className="orders">
                 <div className="orders-square">
                   <p>
-                    <span className="mid-heading">{t.unpaid}:</span> <span className="orders-val">3</span>
+                    <span className="mid-heading">{t.unpaid}:</span>{" "}
+                    <span className="orders-val">3</span>
                   </p>
                 </div>
                 <div className="orders-square">
                   <p>
-                    <span className="mid-heading">{t.unshipped}:</span> <span className="orders-val">5</span>
+                    <span className="mid-heading">{t.unshipped}:</span>{" "}
+                    <span className="orders-val">5</span>
                   </p>
                 </div>
                 <div className="orders-square">
                   <p>
-                    <span className="mid-heading">{t.returns}:</span> <span className="orders-val">4</span>
+                    <span className="mid-heading">{t.returns}:</span>{" "}
+                    <span className="orders-val">4</span>
                   </p>
                 </div>
               </div>
@@ -75,7 +79,7 @@ export default function HomePage() {
           <div className="div2">
             <Widget title={t.ranking}>
               <div className="widgetRanking">
-              <div className="dropdownFilter">
+                <div className="dropdownFilter">
                   <label htmlFor="filter">{t.sortOffers}:</label>
                   <select id="filter">
                     <option>{t.sortMostFreqPurchased}</option>
@@ -93,32 +97,46 @@ export default function HomePage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="rank-table rank-val">Produkt A</td>
-                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">Produkt</td>
+                      <td className="rank-table rank-val">
+                        {" "}
+                        <Stars />
+                      </td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt A</td>
-                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">Produkt</td>
+                      <td className="rank-table rank-val">
+                        {" "}
+                        <Stars />
+                      </td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt A</td>
-                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">Produkt</td>
+                      <td className="rank-table rank-val">
+                        <Stars />
+                      </td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt A</td>
-                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">Produkt</td>
+                      <td className="rank-table rank-val">
+                        {" "}
+                        <Stars />
+                      </td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
                     <tr>
-                      <td className="rank-table rank-val">Produkt A</td>
-                      <td className="rank-table rank-val">tu wstaw zdjęcie</td>
+                      <td className="rank-table rank-val">Produkt</td>
+                      <td className="rank-table rank-val">
+                        {" "}
+                        <Stars />
+                      </td>
                       <td className="rank-table rank-val">60</td>
                       <td className="rank-table rank-val">100</td>
                     </tr>
@@ -130,15 +148,15 @@ export default function HomePage() {
           <div className="div3">
             <Widget title={t.reviews}>
               <div className="widgetReviews">
-                  <div className="dropdownFilter">
-                    <label htmlFor="filter">{t.filterReviews}:</label>
-                    <select id="filter">
-                      <option>{t.all}</option>
-                      <option>{t.filterPositive}</option>
-                      <option>{t.filterNegative}</option>
-                    </select>
-                  </div>
-                <table className="reviewsTable">
+                <div className="dropdownFilter">
+                  <label htmlFor="filter">{t.filterReviews}:</label>
+                  <select id="filter">
+                    <option>{t.all}</option>
+                    <option>{t.filterPositive}</option>
+                    <option>{t.filterNegative}</option>
+                  </select>
+                </div>
+                <table className="rankingTable">
                   <thead>
                     <tr>
                       <th className="rev-table rev-name">{t.client}</th>
@@ -149,38 +167,43 @@ export default function HomePage() {
                   <tbody>
                     <tr>
                       <td className="rev-table rev-val">Client A</td>
-                      <td className="rev-table rev-val">★★★★☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum
+                        {" "}
+                        <Stars />
                       </td>
+                      <td className="rev-table rev-val">Lorem ipsum</td>
                     </tr>
                     <tr>
                       <td className="rev-table rev-val">Client B</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum
+                        {" "}
+                        <Stars />
                       </td>
+                      <td className="rev-table rev-val">Lorem ipsum</td>
                     </tr>
                     <tr>
                       <td className="rev-table rev-val">Client C</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum 
+                        {" "}
+                        <Stars />
                       </td>
+                      <td className="rev-table rev-val">Lorem ipsum</td>
                     </tr>
                     <tr>
                       <td className="rev-table rev-val">Client D</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum 
+                        {" "}
+                        <Stars />
                       </td>
+                      <td className="rev-table rev-val">Lorem ipsum</td>
                     </tr>
                     <tr>
                       <td className="rev-table rev-val">Client E</td>
-                      <td className="rev-table rev-val">★★☆☆☆</td>
                       <td className="rev-table rev-val">
-                        Lorem ipsum 
+                        {" "}
+                        <Stars />
                       </td>
+                      <td className="rev-table rev-val">Lorem ipsum</td>
                     </tr>
                   </tbody>
                 </table>
@@ -199,28 +222,28 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="chart-options">
-                    <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.chartMeasure}:</label>
-                      <select id="filter">
-                        <option>{t.soldItems}</option>
-                        <option>{t.turnover}</option>
-                      </select>
-                    </div>
-                    <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.chartTimePeriod}:</label>
-                      <select id="filter">
-                        <option>{t.today}</option>
-                        <option>{t.week}</option>
-                        <option>{t.month}</option>
-                      </select>
-                    </div>
-                    <div className="dropdownFilter">
-                      <label htmlFor="filter">{t.chartPresentationMethod}:</label>
-                      <select id="filter">
-                        <option>{t.barChart}</option>
-                        <option>{t.lineChart}</option>
-                      </select>
-                    </div>
+                  <div className="dropdownFilter">
+                    <label htmlFor="filter">{t.chartMeasure}:</label>
+                    <select id="filter">
+                      <option>{t.soldItems}</option>
+                      <option>{t.turnover}</option>
+                    </select>
+                  </div>
+                  <div className="dropdownFilter">
+                    <label htmlFor="filter">{t.chartTimePeriod}:</label>
+                    <select id="filter">
+                      <option>{t.today}</option>
+                      <option>{t.week}</option>
+                      <option>{t.month}</option>
+                    </select>
+                  </div>
+                  <div className="dropdownFilter">
+                    <label htmlFor="filter">{t.chartPresentationMethod}:</label>
+                    <select id="filter">
+                      <option>{t.barChart}</option>
+                      <option>{t.lineChart}</option>
+                    </select>
+                  </div>
                   <label>
                     <input type="checkbox" /> {t.previousData}
                   </label>
@@ -230,7 +253,10 @@ export default function HomePage() {
           </div>
           <div className="div6">
             <Widget title={t.widgetAdvice}>
-              <p>Wykorzystaj promocje i rabaty, aby przyciągnąć nowych klientów i zwiększyć sprzedaż.</p>
+              <p>
+                Wykorzystaj promocje i rabaty, aby przyciągnąć nowych klientów i
+                zwiększyć sprzedaż.
+              </p>
             </Widget>
           </div>
         </div>

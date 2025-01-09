@@ -44,12 +44,19 @@ body {
 }
 
 h2 {
-  margin: 15px 0 25px;
+  margin: 15px 0 20px;
 }
 
 .dashboard {
   padding: 15px;
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
 
 .controls button {
   background-color: var(--button-background);
@@ -64,6 +71,58 @@ h2 {
 .controls button:hover {
   background-color: var(--button-hover);
   opacity: 0.9;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.logout {
+  margin-top: 5px;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
 }
 
 .cssPortalGrid {
@@ -164,13 +223,13 @@ h2 {
 
 .orders {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .orders-square {
   border: 2px solid var(--button-hover);
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
 
   display: flex;
   justify-content: center;
@@ -192,7 +251,8 @@ h2 {
   padding: 10px;
 }
 
-.widgetReviews, .widgetRanking {
+.widgetReviews,
+.widgetRanking {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -202,6 +262,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 5px;
 }
 
 .dropdownFilter select {
@@ -233,6 +294,7 @@ h2 {
 .rev-table {
   padding: 5px 15px;
   border: 1px solid var(--table-border);
+  text-align: center;
 }
 
 .reviewsTable th {
@@ -260,7 +322,6 @@ h2 {
   font-weight: bold;
 }
 
-
 .widget h4,
 .widget p {
   margin: 5px 0;
@@ -285,5 +346,9 @@ label {
   color: var(--mid-heading);
   font-size: 15px;
   font-weight: 700;
+}
 
+.stars {
+
+  font-size: 0.5rem;
 }
