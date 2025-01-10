@@ -2,7 +2,9 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "./layout";
 import Widget from "@/components/Widget";
+import Tile from "@/components/Tile";
 import BarChart from "@/components/BarChart";
+import LineChart from "@/components/LineChart";
 import Stars from "@/components/Stars";
 import "./globals.css";
 
@@ -15,39 +17,44 @@ export default function HomePage() {
         <div className="cssPortalGrid">
           <div className="div1">
             <Widget title={t.salesQuality}>
-              <div className="widgetSales">
-                <div className="scoreCategory">
+              <div className="widget-sales">
+                <div className="tiles-sales-section">
                   <div className="score">
-                    <p className="mid-heading quality-name score-name">
-                      {t.score}
-                    </p>
-                    <p className="quality-val score-val">27/60</p>
+                    <Tile
+                      title={t.score}
+                      value="27/60"
+                      width="110px"
+                      height="80px"
+                    />
                   </div>
                   <div className="category">
-                    <p className="mid-heading quality-name category-name">
-                      {t.category}
-                    </p>
-                    <p className="quality-val category-val">Słaby</p>
+                    <Tile
+                      title={t.category}
+                      value="Słaby"
+                      width="110px"
+                      height="80px"
+                    />
                   </div>
                 </div>
-
-                <h4 className="mid-heading">{t.worstAspects}:</h4>
-                <table className="invisibleTable">
-                  <tbody>
-                    <tr>
-                      <td>{t.shipping}</td>
-                      <td>2/10</td>
-                    </tr>
-                    <tr>
-                      <td>{t.price}</td>
-                      <td>4/15</td>
-                    </tr>
-                    <tr>
-                      <td>{t.productQuality}</td>
-                      <td>4/10</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="sales-table">
+                  <h4 className="mid-heading sales-heading">{t.worstAspects}:</h4>
+                  <table className="invisibleTable">
+                    <tbody>
+                      <tr>
+                        <td>{t.shipping}</td>
+                        <td>2/10</td>
+                      </tr>
+                      <tr>
+                        <td>{t.price}</td>
+                        <td>4/15</td>
+                      </tr>
+                      <tr>
+                        <td>{t.productQuality}</td>
+                        <td>4/10</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </Widget>
           </div>
@@ -55,24 +62,19 @@ export default function HomePage() {
           <div className="div5">
             <Widget title={t.orders}>
               <div className="orders">
-                <div className="orders-square">
-                  <p>
-                    <span className="mid-heading">{t.unpaid}</span>{" "}
-                    <span className="orders-val">3</span>
-                  </p>
-                </div>
-                <div className="orders-square">
-                  <p>
-                    <span className="mid-heading">{t.unshipped}:</span>{" "}
-                    <span className="orders-val">5</span>
-                  </p>
-                </div>
-                <div className="orders-square">
-                  <p>
-                    <span className="mid-heading">{t.returns}:</span>{" "}
-                    <span className="orders-val">4</span>
-                  </p>
-                </div>
+                <Tile title={t.unpaid} value="3" width="110px" height="110px" />
+                <Tile
+                  title={t.unshipped}
+                  value="5"
+                  width="110px"
+                  height="110px"
+                />
+                <Tile
+                  title={t.returns}
+                  value="4"
+                  width="110px"
+                  height="110px"
+                />
               </div>
             </Widget>
           </div>
@@ -102,7 +104,11 @@ export default function HomePage() {
                         <img
                           src={"/black_image.jpg"}
                           alt={"Product photo"}
-                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                          style={{
+                            width: "2em",
+                            height: "2em",
+                            verticalAlign: "middle",
+                          }}
                         />
                       </td>
                       <td className="rank-table rank-val">Produkt A</td>
@@ -114,7 +120,11 @@ export default function HomePage() {
                         <img
                           src={"/black_image.jpg"}
                           alt={"Product photo"}
-                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                          style={{
+                            width: "2em",
+                            height: "2em",
+                            verticalAlign: "middle",
+                          }}
                         />
                       </td>
                       <td className="rank-table rank-val">Produkt A</td>
@@ -126,7 +136,11 @@ export default function HomePage() {
                         <img
                           src={"/black_image.jpg"}
                           alt={"Product photo"}
-                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                          style={{
+                            width: "2em",
+                            height: "2em",
+                            verticalAlign: "middle",
+                          }}
                         />
                       </td>
                       <td className="rank-table rank-val">Produkt A</td>
@@ -138,7 +152,11 @@ export default function HomePage() {
                         <img
                           src={"/black_image.jpg"}
                           alt={"Product photo"}
-                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                          style={{
+                            width: "2em",
+                            height: "2em",
+                            verticalAlign: "middle",
+                          }}
                         />
                       </td>
                       <td className="rank-table rank-val">Produkt A</td>
@@ -150,7 +168,11 @@ export default function HomePage() {
                         <img
                           src={"/black_image.jpg"}
                           alt={"Product photo"}
-                          style={{ width: "2em", height: "2em", verticalAlign: "middle" }}
+                          style={{
+                            width: "2em",
+                            height: "2em",
+                            verticalAlign: "middle",
+                          }}
                         />
                       </td>
                       <td className="rank-table rank-val">Produkt A</td>
@@ -173,7 +195,7 @@ export default function HomePage() {
                     <option>{t.filterNegative}</option>
                   </select>
                 </div>
-                <table className="rankingTable">
+                <table className="reviewTable">
                   <thead>
                     <tr>
                       <th className="rev-table rev-name">{t.client}</th>
@@ -232,6 +254,7 @@ export default function HomePage() {
               <div className="chart-container">
                 <div className="chart">
                   <BarChart />
+      
                 </div>
                 <div className="chart-options">
                   <div className="dropdownFilter">
@@ -256,8 +279,9 @@ export default function HomePage() {
                       <option>{t.lineChart}</option>
                     </select>
                   </div>
-                  <label>
+                  <label className="checkbox-label">
                     <input type="checkbox" /> {t.previousData}
+                    <span className="checkbox-container"></span>
                   </label>
                 </div>
               </div>

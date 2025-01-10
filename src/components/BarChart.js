@@ -1,21 +1,27 @@
 import React from "react";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 
-// Register the required components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const BarChart = () => {
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"],
     datasets: [
       {
         label: "Sales",
-        data: [30, 45, 60, 40, 80, 70],
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        data:[65, 59, 80, 81, 56, 55], 
+        borderColor: "#EDA011",
+        backgroundColor: "#EDA011",
         borderWidth: 1,
       },
+      {
+        label: "Sales",
+        data:[55, 44, 70, 90, 50, 21], 
+        borderColor: "#DB6516",
+        backgroundColor: "#DB6516",
+        borderWidth: 1,
+      }
     ],
   };
 
@@ -23,10 +29,11 @@ const BarChart = () => {
     responsive: true,
     plugins: {
       legend: {
+        display: false,
         position: "top",
       },
       title: {
-        display: true,
+        display: false,
         text: "Monthly Sales",
       },
     },
@@ -37,13 +44,17 @@ const BarChart = () => {
         },
       },
       y: {
+        title: {
+          display: true,
+          text: "Liczba sprzedanych sztuk",
+        },
         beginAtZero: true,
       },
     },
   };
 
   return (
-    <div style={{ height: "250px", width: "700px", margin: "0 auto" }}>
+    <div className="chart-bar">
       <Bar data={data} options={options} />
     </div>
   );

@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
           value={{ t, language, toggleLanguage, toggleTheme }}
         >
           <header className="header">
-            <h1>{t.title}</h1>
+            <h1 className="header-title">{t.title}</h1>
             <div className="controls">
               <button onClick={toggleTheme}>
                 {theme === "light" ? t.darkTheme : t.lightTheme}
