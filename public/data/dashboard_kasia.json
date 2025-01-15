@@ -8,17 +8,17 @@
           {
             "id": "unpaid",
             "title": "Unpaid",
-            "value": 3
+            "value": 8
           },
           {
             "id": "unshipped",
             "title": "Unshipped",
-            "value": 5
+            "value": 12
           },
           {
             "id": "returns",
             "title": "Returns",
-            "value": 4
+            "value": 1
           }
         ]
       },
@@ -30,32 +30,32 @@
             "id": "shipping",
             "title": "Shipping Speed",
             "polishTitle": "Prędkość wysyłki",
-            "value": 2,
+            "value": 6,
             "weight": 10
           },
           {
             "id": "price",
             "title": "Price",
             "polishTitle": "Cena",
-            "value": 4,
+            "value": 5,
             "weight": 15
           },
           {
             "id": "productQuality",
             "title": "Product Quality",
             "polishTitle": "Jakość produktu",
-            "value": 4,
+            "value": 6,
             "weight": 10
           },
           {
-            "id": "seller_communication",
+            "id": "sellerCommunication",
             "title": "Seller Communication",
             "polishTitle": "Komunikacja ze sprzedawcą",
-            "value": 9,
+            "value": 8,
             "weight": 15
           },
           {
-            "id": "product_description_accuracy",
+            "id": "productDescriptionAccuracy",
             "title": "Product Description Accuracy",
             "polishTitle": "Zgodność produktu z opisem",
             "value": 7,
@@ -88,157 +88,159 @@
           {
             "client": "Alice Johnson",
             "polishClient": "Alicja Kowalska",
-            "score": 5,
-            "comment": "Excellent service, will definitely come back!",
-            "polishComment": "Świetna obsługa, na pewno wrócę!"
+            "score": 4,
+            "comment": "The service was good, but it took longer than expected.",
+            "polishComment": "Usługa była dobra, ale zajęło to dłużej niż oczekiwano."
           },
           {
-            "client": "Bob Smith",
-            "polishClient": "Bartosz Nowak",
+            "client": "Daniel Smith",
+            "polishClient": "Daniel Nowak",
             "score": 3,
-            "comment": "The product was okay, but the delivery was delayed.",
-            "polishComment": "Produkt był w porządku, ale dostawa się opóźniła."
+            "comment": "The product quality is average. It could be better.",
+            "polishComment": "Jakość produktu jest przeciętna. Może być lepsza."
           },
           {
-            "client": "Catherine Lee",
-            "polishClient": "Katarzyna Wiśniewska",
-            "score": 4,
-            "comment": "Good quality, but the packaging could be improved.",
-            "polishComment": "Dobra jakość, ale opakowanie mogłoby być lepsze."
-          },
-          {
-            "client": "David Brown",
-            "polishClient": "Dawid Zieliński",
-            "score": 2,
-            "comment": "The product didn’t meet my expectations, quite disappointing.",
-            "polishComment": "Produkt nie spełnił moich oczekiwań, dość rozczarowujące."
-          },
-          {
-            "client": "Emily White",
-            "polishClient": "Emilia Kaczmarek",
+            "client": "Emma Davis",
+            "polishClient": "Emilia Dąbrowska",
             "score": 5,
-            "comment": "Amazing experience! Highly recommend to others.",
-            "polishComment": "Niesamowite doświadczenie! Gorąco polecam innym."
+            "comment": "Very satisfied with the purchase. Will buy again!",
+            "polishComment": "Bardzo zadowolona z zakupu. Z pewnością kupię ponownie!"
           },
           {
-            "client": "Frank Harris",
-            "polishClient": "Franek Nowicki",
+            "client": "James Wilson",
+            "polishClient": "Jakub Wiśniewski",
+            "score": 2,
+            "comment": "The product broke after a few uses. Very disappointed.",
+            "polishComment": "Produkt zepsuł się po kilku użyciach. Bardzo rozczarowany."
+          },
+          {
+            "client": "Mia Clark",
+            "polishClient": "Maja Zawisza",
             "score": 4,
-            "comment": "Very good quality, but a bit overpriced.",
-            "polishComment": "Bardzo dobra jakość, ale nieco za droga."
+            "comment": "The packaging could be improved, but the product itself is excellent.",
+            "polishComment": "Opakowanie mogłoby być lepsze, ale sam produkt jest doskonały."
           },
           {
-            "client": "Grace Lee",
-            "polishClient": "Gracja Kowalczyk",
+            "client": "Chris Miller",
+            "polishClient": "Krzysztof Kowalczyk",
             "score": 3,
-            "comment": "The product was fine, but the customer service was unresponsive.",
-            "polishComment": "Produkt był w porządku, ale obsługa klienta nie odpowiadała."
+            "comment": "Good quality, but the delivery took longer than I hoped.",
+            "polishComment": "Dobra jakość, ale dostawa zajęła dłużej niż się spodziewałem."
           },
           {
-            "client": "Henry Davis",
-            "polishClient": "Henryk Dąbrowski",
-            "score": 2,
-            "comment": "Not satisfied, the product was damaged upon arrival.",
-            "polishComment": "Nie jestem zadowolony, produkt był uszkodzony po przyjeździe."
-          },
-          {
-            "client": "Isabella Green",
-            "polishClient": "Izabela Zielińska",
+            "client": "Sophia Lee",
+            "polishClient": "Zofia Nowak",
             "score": 5,
-            "comment": "Fantastic product! Exceeded my expectations.",
-            "polishComment": "Fantastyczny produkt! Przekroczył moje oczekiwania."
+            "comment": "The product exceeded expectations, very happy with the purchase.",
+            "polishComment": "Produkt przekroczył oczekiwania, bardzo zadowolona z zakupu."
           },
           {
-            "client": "Jack Miller",
-            "polishClient": "Jacek Wójcik",
-            "score": 4,
-            "comment": "Good product, but the shipping time was a bit longer than expected.",
-            "polishComment": "Dobry produkt, ale czas wysyłki był nieco dłuższy niż oczekiwano."
+            "client": "Michael Brown",
+            "polishClient": "Michał Zieliński",
+            "score": 1,
+            "comment": "Not satisfied at all, the item was damaged upon arrival.",
+            "polishComment": "Wcale nie jestem zadowolony, produkt był uszkodzony po przyjeździe."
+          },
+          {
+            "client": "Olivia Wilson",
+            "polishClient": "Olga Wiśniewska",
+            "score": 5,
+            "comment": "Excellent quality, fast shipping, will definitely buy again.",
+            "polishComment": "Świetna jakość, szybka dostawa, na pewno kupię ponownie."
+          },
+          {
+            "client": "Liam Martinez",
+            "polishClient": "Liam Kowalczyk",
+            "score": 3,
+            "comment": "Decent product, but I expected better value for the price.",
+            "polishComment": "Przyzwoity produkt, ale oczekiwałem lepszej jakości za tę cenę."
           }
         ]
       },
       {
         "id": "ranking",
+        "title": "Top Products Ranking",
+        "polishTitle": "Ranking Najlepszych Produktów",
         "products": [
           {
             "photo": "example.jpg",
-            "name": "Telewizor LED",
-            "polishName": "Telewizor LED",
-            "soldItems": 150,
-            "turnover": 75000,
-            "viewsCount": 200
+            "name": "Washing Machine 7kg",
+            "polishName": "Pralka 7kg",
+            "soldItems": 120,
+            "turnover": 48000,
+            "viewsCount": 160
           },
           {
             "photo": "example.jpg",
-            "name": "Lodówka NoFrost",
-            "polishName": "Lodówka NoFrost",
-            "soldItems": 130,
-            "turnover": 65000,
-            "viewsCount": 180
+            "name": "4K TV 55 inches",
+            "polishName": "Telewizor 4K 55 cali",
+            "soldItems": 110,
+            "turnover": 55000,
+            "viewsCount": 170
           },
           {
             "photo": "example.jpg",
-            "name": "Laptop 15.6 inches",
-            "polishName": "Laptop 15,6 cala",
-            "soldItems": 100,
-            "turnover": 60000,
-            "viewsCount": 150
+            "name": "Laptop 13.3 inches",
+            "polishName": "Laptop 13,3 cala",
+            "soldItems": 95,
+            "turnover": 47500,
+            "viewsCount": 130
           },
           {
             "photo": "example.jpg",
-            "name": "Smartphone 128GB",
-            "polishName": "Smartfon 128GB",
-            "soldItems": 80,
+            "name": "Smartphone 64GB",
+            "polishName": "Smartfon 64GB",
+            "soldItems": 85,
             "turnover": 45000,
-            "viewsCount": 120
+            "viewsCount": 140
           },
           {
             "photo": "example.jpg",
-            "name": "Built-in Dishwasher",
-            "polishName": "Zmywarka do zabudowy",
-            "soldItems": 60,
-            "turnover": 35000,
-            "viewsCount": 110
-          },
-          {
-            "photo": "example.jpg",
-            "name": "Gaming Console",
-            "polishName": "Konsola do gier",
-            "soldItems": 50,
-            "turnover": 30000,
-            "viewsCount": 100
-          },
-          {
-            "photo": "example.jpg",
-            "name": "Coffee Machine",
-            "polishName": "Ekspres do kawy",
-            "soldItems": 40,
-            "turnover": 25000,
+            "name": "Microwave Oven",
+            "polishName": "Kuchenka mikrofalowa",
+            "soldItems": 75,
+            "turnover": 37500,
             "viewsCount": 90
           },
           {
             "photo": "example.jpg",
-            "name": "Stick Vacuum Cleaner",
-            "polishName": "Odkurzacz pionowy",
-            "soldItems": 30,
-            "turnover": 18000,
+            "name": "Bluetooth Headphones",
+            "polishName": "Słuchawki Bluetooth",
+            "soldItems": 60,
+            "turnover": 30000,
             "viewsCount": 80
           },
           {
             "photo": "example.jpg",
-            "name": "Blender",
-            "polishName": "Blender kielichowy",
-            "soldItems": 20,
-            "turnover": 12000,
+            "name": "Electric Kettle",
+            "polishName": "Czajnik elektryczny",
+            "soldItems": 50,
+            "turnover": 25000,
+            "viewsCount": 70
+          },
+          {
+            "photo": "example.jpg",
+            "name": "Cordless Vacuum Cleaner",
+            "polishName": "Odkurzacz bezprzewodowy",
+            "soldItems": 40,
+            "turnover": 20000,
+            "viewsCount": 60
+          },
+          {
+            "photo": "example.jpg",
+            "name": "Blender 800W",
+            "polishName": "Blender 800W",
+            "soldItems": 30,
+            "turnover": 15000,
             "viewsCount": 50
           },
           {
             "photo": "example.jpg",
-            "name": "Electric Grill",
-            "polishName": "Grill elektryczny",
-            "soldItems": 10,
-            "turnover": 5000,
-            "viewsCount": 30
+            "name": "Toaster",
+            "polishName": "Toster",
+            "soldItems": 20,
+            "turnover": 10000,
+            "viewsCount": 40
           }
         ]
       },

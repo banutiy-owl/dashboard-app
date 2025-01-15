@@ -324,9 +324,8 @@ body {
   font-weight: bold;
 }
 
-.reviewsTable td:first-child,
-.reviewsTable td:nth-child(2) {
-  width: 20%;
+.score-column{
+  width:25%;
 }
 
 .rankingTable {
@@ -380,7 +379,7 @@ label {
 }
 
 .stars {
-  font: var(--label-font);
+  font-size: 10px;
 }
 
 .chart-bar {

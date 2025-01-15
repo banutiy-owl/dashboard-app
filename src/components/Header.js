@@ -2,11 +2,10 @@ import React, { useContext, useRef, useState, useEffect } from "react";
 import { LanguageContext } from "@/app/layout";
 
 const Header = () => {
-  const { t, language, toggleLanguage, toggleTheme } =
+  const { t, language, toggleLanguage, toggleTheme, currentAccount, changeAccount } =
     useContext(LanguageContext);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const accounts = ["Account 1", "Account 2", "Account 3"];
-  const [currentAccount, setCurrentAccount] = useState("Account 1");
+  const accounts = ["Kasia", "Weronika"];
   const dropdownRef = useRef(null);
 
   const handleDropdownToggle = () => {
@@ -14,7 +13,7 @@ const Header = () => {
   };
 
   const handleAccountChange = (account) => {
-    setCurrentAccount(account);
+    changeAccount(account);
     setDropdownOpen(false);
   };
 
