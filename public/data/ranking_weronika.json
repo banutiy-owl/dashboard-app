@@ -1,0 +1,63 @@
+[
+  {
+    "photo": "example.jpg",
+    "name": "Telewizor LED",
+    "soldItems": 150,
+    "turnover": 75000,
+    "viewsCount": 67
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Lodówka NoFrost",
+    "soldItems": 130,
+    "turnover": 65000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Laptop 15,6 cala",
+    "soldItems": 100,
+    "turnover": 60000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Smartfon 128GB",
+    "soldItems": 80,
+    "turnover": 45000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Zmywarka do zabudowy",
+    "soldItems": 60,
+    "turnover": 35000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Konsola do gier",
+    "soldItems": 50,
+    "turnover": 30000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Ekspres do kawy",
+    "soldItems": 40,
+    "turnover": 25000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Odkurzacz pionowy",
+    "soldItems": 30,
+    "turnover": 18000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Blender kielichowy",
+    "soldItems": 20,
+    "turnover": 12000
+  },
+  {
+    "photo": "example.jpg",
+    "name": "Grill elektryczny",
+    "soldItems": 10,
+    "turnover": 5000
+  }
+]

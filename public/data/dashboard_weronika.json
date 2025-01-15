@@ -1,0 +1,220 @@
+{
+    "dashboard": {
+      "widgets": [
+        {
+          "id": "orders",
+          "title": "Orders",
+          "tiles": [
+            {
+              "id": "unpaid",
+              "title": "Unpaid",
+              "value": 3
+            },
+            {
+              "id": "unshipped",
+              "title": "Unshipped",
+              "value": 5
+            },
+            {
+              "id": "returns",
+              "title": "Returns",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "sales",
+          "title": "Sales Quality",
+          "tiles": [
+            {
+              "id": "shipping_speed",
+              "title": "Shipping Speed",
+              "polishTitle": "Prędkość wysyłki",
+              "value": 2,
+              "maxScore": 10,
+              "weight": 10
+            },
+            {
+              "id": "price",
+              "title": "Price",
+              "polishTitle": "Cena",
+              "value": 4,
+              "maxScore": 10,
+              "weight": 15
+            },
+            {
+              "id": "product_quality",
+              "title": "Product Quality",
+              "polishTitle": "Jakość produktu",
+              "value": 4,
+              "maxScore": 10,
+              "weight": 10
+            },
+            {
+              "id": "seller_communication",
+              "title": "Seller Communication",
+              "polishTitle": "Komunikacja ze sprzedawcą",
+              "value": 9,
+              "maxScore": 10,
+              "weight": 15
+            },
+            {
+              "id": "product_description_accuracy",
+              "title": "Product Description Accuracy",
+              "polishTitle": "Zgodność produktu z opisem",
+              "value": 7,
+              "maxScore": 10,
+              "weight": 10
+            }
+          ]
+        },
+        {
+          "id": "reviews",
+          "title": "Reviews",
+          "polishTitle": "Opinie",
+          "dropdownFilters": [
+            {
+              "id": "all",
+              "title": "All",
+              "polishTitle": "Wszystkie"
+            },
+            {
+              "id": "positive",
+              "title": "Positive",
+              "polishTitle": "Pozytywne"
+            },
+            {
+              "id": "negative",
+              "title": "Negative",
+              "polishTitle": "Negatywne"
+            }
+          ],
+          "reviewTable": [
+            {
+              "client": "Client A",
+              "polishClient": "Klient A",
+              "score": 5,
+              "comment": "Lorem ipsum",
+              "polishComment": "Przykładowy komentarz"
+            },
+            {
+              "client": "Client B",
+              "polishClient": "Klient B",
+              "score": 4,
+              "comment": "Lorem ipsum",
+              "polishComment": "Przykładowy komentarz"
+            },
+            {
+              "client": "Client C",
+              "polishClient": "Klient C",
+              "score": 3,
+              "comment": "Lorem ipsum",
+              "polishComment": "Przykładowy komentarz"
+            },
+            {
+              "client": "Client D",
+              "polishClient": "Klient D",
+              "score": 5,
+              "comment": "Lorem ipsum",
+              "polishComment": "Przykładowy komentarz"
+            },
+            {
+              "client": "Client E",
+              "polishClient": "Klient E",
+              "score": 4,
+              "comment": "Lorem ipsum",
+              "polishComment": "Przykładowy komentarz"
+            }
+          ]
+        },
+        {
+          "id": "ranking",
+          "title": "Top Products Ranking",
+          "polishTitle": "Ranking Najlepszych Produktów",
+          "products": [
+            {
+              "photo": "example.jpg",
+              "name": "Telewizor LED",
+              "polishName": "Telewizor LED",
+              "soldItems": 150,
+              "turnover": 75000,
+              "viewsCount": 200
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Lodówka NoFrost",
+              "polishName": "Lodówka NoFrost",
+              "soldItems": 130,
+              "turnover": 65000,
+              "viewsCount": 180
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Laptop 15.6 inches",
+              "polishName": "Laptop 15,6 cala",
+              "soldItems": 100,
+              "turnover": 60000,
+              "viewsCount": 150
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Smartphone 128GB",
+              "polishName": "Smartfon 128GB",
+              "soldItems": 80,
+              "turnover": 45000,
+              "viewsCount": 120
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Built-in Dishwasher",
+              "polishName": "Zmywarka do zabudowy",
+              "soldItems": 60,
+              "turnover": 35000,
+              "viewsCount": 110
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Gaming Console",
+              "polishName": "Konsola do gier",
+              "soldItems": 50,
+              "turnover": 30000,
+              "viewsCount": 100
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Coffee Machine",
+              "polishName": "Ekspres do kawy",
+              "soldItems": 40,
+              "turnover": 25000,
+              "viewsCount": 90
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Stick Vacuum Cleaner",
+              "polishName": "Odkurzacz pionowy",
+              "soldItems": 30,
+              "turnover": 18000,
+              "viewsCount": 80
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Blender",
+              "polishName": "Blender kielichowy",
+              "soldItems": 20,
+              "turnover": 12000,
+              "viewsCount": 50
+            },
+            {
+              "photo": "example.jpg",
+              "name": "Electric Grill",
+              "polishName": "Grill elektryczny",
+              "soldItems": 10,
+              "turnover": 5000,
+              "viewsCount": 30
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

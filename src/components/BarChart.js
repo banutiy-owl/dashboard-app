@@ -15,13 +15,6 @@ const BarChart = () => {
         backgroundColor: "#EDA011",
         borderWidth: 1,
       },
-      {
-        label: "Sales",
-        data:[55, 44, 70, 90, 50, 21], 
-        borderColor: "#DB6516",
-        backgroundColor: "#DB6516",
-        borderWidth: 1,
-      }
     ],
   };
 

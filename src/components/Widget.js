@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/widget.css";
 
-const Widget = ({ title, children }) => {
+const Widget = ({ title, children, onClick }) => {
   return (
     <div className="widget">
-      <h2 className="widget-title">{title}</h2>
+      <h2 className="widget-title" onClick={onClick}>
+        {title}
+      </h2>
       {children}
     </div>
   );

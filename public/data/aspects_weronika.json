@@ -1,0 +1,32 @@
+[
+    {
+        "polishName": "Prędkość wysyłki",
+        "englishName": "Shipping speed",
+        "score": 2,
+        "weight": 10
+    },
+    {
+        "polishName": "Cena",
+        "englishName": "Price",
+        "score": 4,
+        "weight": 15
+    },
+    {
+        "polishName": "Jakość produktu",
+        "englishName": "Product quality",
+        "score": 4,
+        "weight": 10
+    },
+    {
+        "polishName": "Komunikacja ze sprzedawcą",
+        "englishName": "Seller communication",
+        "score": 9,
+        "weight": 15
+    },
+    {
+        "polishName": "Zgodność produktu z opisem",
+        "englishName": "Product description accuracy",
+        "score": 7,
+        "weight": 10
+    }
+]
