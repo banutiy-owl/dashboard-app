@@ -1,13 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import Widget from "@/components/Widget";
-import OknoRanking from "@/components/okna/OknoRanking";
 import { LanguageContext } from "@/app/layout";
 import RankingTable from "@/components/ranking/RankingTable";
 import RankingSort from "@/components/ranking/RankingSort";
 
 const WidgetRanking = (props) => {
   const { t } = useContext(LanguageContext);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [rankingData, setRankingData] = useState([]);
   const [sortedData, setSortedData] = useState([]);
   const [sortMethod, setSortMethod] = useState("mostFreqPurchased");
@@ -46,12 +44,9 @@ const WidgetRanking = (props) => {
     }
   }, [sortMethod, rankingData]);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <div className="widgetRanking">
-      <Widget title={t.ranking} onClick={openModal}>
+      <Widget title={t.ranking}>
         <RankingSort
           sortMethod={sortMethod}
           setSortMethod={setSortMethod}
@@ -61,7 +56,6 @@ const WidgetRanking = (props) => {
           <RankingTable sortedData={sortedData} sortMethod={sortMethod} t={t} />
         </div>
       </Widget>
-      {isModalOpen && <OknoRanking onClose={closeModal} title={t.ranking} />}
     </div>
   );
 };

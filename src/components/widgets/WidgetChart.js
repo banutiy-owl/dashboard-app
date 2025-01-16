@@ -1,24 +1,14 @@
 import React, { useContext, useState } from "react";
 import Widget from "@/components/Widget";
 import Chart from "@/components/Chart";
-import OknoChart from "@/components/okna/OknoChart";
 import { LanguageContext } from "@/app/layout";
 
 const WidgetChart = (props) => {
   const { t } = useContext(LanguageContext);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [chartType, setChartType] = useState("bar");
+  const [chartType, setChartType] = useState("line");
   const [showLastData, setShowLastData] = useState(false);
-  const [salesMeasure, setSalesMeasure] = useState("soldItems");
-  const [timePeriod, setTimePeriod] = useState("week");
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const [salesMeasure, setSalesMeasure] = useState("turnover");
+  const [timePeriod, setTimePeriod] = useState("day");
 
   const handleCheckboxChange = () => {
     setShowLastData((prev) => !prev);
@@ -34,7 +24,7 @@ const WidgetChart = (props) => {
 
   return (
     <div className="widgetChart">
-      <Widget title={t.salesChart} onClick={openModal}>
+      <Widget title={t.salesChart}>
         <div className="chart-container">
           <div className="chart">
             <Chart
@@ -90,7 +80,7 @@ const WidgetChart = (props) => {
           </div>
         </div>
       </Widget>
-      {isModalOpen && <OknoChart onClose={closeModal} title={t.salesChart} />}
+   
     </div>
   );
 };

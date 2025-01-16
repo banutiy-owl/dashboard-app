@@ -76,7 +76,8 @@ const Chart = ({ chartType, showLastData, salesMeasure, timePeriod, t }) => {
                     ? `${entry.hour}:00`
                     : days[entry.weekday.toLowerCase()]
                 ),
-              ]))
+              ])
+            )
           : labels;
 
         const dataForCurrent = extendedLabels.map(
@@ -105,6 +106,15 @@ const Chart = ({ chartType, showLastData, salesMeasure, timePeriod, t }) => {
             })?.[salesMeasure] || 0
         );
 
+        const lastCurrentIndex = currentData.length - 1;
+        const backgroundColors = dataForCurrent.map((_, index) =>
+          index === lastCurrentIndex
+            ? "#00a678"
+            : theme === "dark"
+            ? "#F1A600"
+            : "#EDA011"
+        );
+
         setChartDataState({
           labels: extendedLabels,
           datasets: [
@@ -114,8 +124,8 @@ const Chart = ({ chartType, showLastData, salesMeasure, timePeriod, t }) => {
                   ? t["soldItems"] + " (" + t["current"] + ")"
                   : t["turnover"] + " (" + t["current"] + ")",
               data: dataForCurrent,
-              backgroundColor: theme === "dark" ? "#F1A600" : "#EDA011",
-              borderColor: theme === "dark" ? "#F1A600" : "#EDA011",
+              backgroundColor: backgroundColors,
+              borderColor: backgroundColors,
               borderWidth: 1,
             },
             ...(showLastData

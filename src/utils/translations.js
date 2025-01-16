@@ -48,7 +48,7 @@ const translations = {
     week: "Obecny tydzień",
     month: "Obecny miesiąc",
     barChart: "Wykres słupkowy",
-    lineChart: "Wykres kolumnowy",
+    lineChart: "Wykres liniowy",
     logout: "Wyloguj",
     monday: "Poniedziałek",
     tuesday: "Wtorek",
