@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
             language,
             toggleLanguage,
             toggleTheme,
+            theme,
             currentAccount,
             changeAccount,
           }}

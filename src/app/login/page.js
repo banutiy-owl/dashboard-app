@@ -1,8 +1,10 @@
-"use client";
+"use client"; 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import "../../styles/login_styles.css";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,8 +15,12 @@ export default function LoginPage() {
       setError("Both fields are required!");
       return;
     }
-    setError("");
-    onSubmit({ email, password });
+    if (email === "kate@gmail.com" && password === "haslo123") {
+      setError("");
+      router.push('/dashboard');
+    } else {
+      setError("Invalid email or password!");
+    }
   };
 
   return (

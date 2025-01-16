@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import Widget from "@/components/Widget";
-import Stars from "@/components/Stars";
 import OknoReviews from "@/components/okna/OknoReviews";
 import { LanguageContext } from "@/app/layout";
+import ReviewTable from "@/components/reviews/ReviewTable";
+import ReviewFilter from "@/components/reviews/ReviewFilter";
 
 const WidgetReviews = (props) => {
   const { t } = useContext(LanguageContext);
@@ -57,40 +58,13 @@ const WidgetReviews = (props) => {
     <div className="widgetReviews">
       <Widget title={t.reviews} onClick={openModal}>
         <div className="widget-reviews">
-          <div className="dropdownFilter">
-            <label htmlFor="filter">{t.filterReviews}:</label>
-            <select
-              id="filter"
-              onChange={(e) => {
-                handleFilter(e.target.value);
-              }}
-            >
-              <option value="all">{t.all}</option>
-              <option value="filterPositive">{t.filterPositive}</option>
-              <option value="filterNegative">{t.filterNegative}</option>
-            </select>
-          </div>
+          <ReviewFilter
+            filterMethod={filterMethod}
+            handleFilter={handleFilter}
+            t={t}
+          />
           <div className="scrollable">
-            <table className="reviewTable">
-              <thead>
-                <tr>
-                  <th className="rev-table rev-name">{t.client}</th>
-                  <th className="rev-table rev-name score-column">{t.score}</th>
-                  <th className="rev-table rev-name">{t.comment}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredReviews.slice(0, 5).map((item, index) => (
-                  <tr key={index}>
-                    <td className="rev-table rev-val">{item.client}</td>
-                    <td className="rev-table rev-val">
-                      <Stars score={item.score} />
-                    </td>
-                    <td className="rev-table rev-val">{item.comment}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <ReviewTable filteredReviews={filteredReviews} t={t} />
           </div>
         </div>
       </Widget>

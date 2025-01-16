@@ -78,6 +78,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
+
+
 .controls:not(:last-child) button {
   margin-right: 10px;
 }
@@ -99,6 +101,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font: var(--label-font);
+  min-width: 90px;
 }
 
 .dropdown-toggle:hover {
@@ -289,6 +292,7 @@ body {
   gap: 0.5rem;
 }
 
+
 .dropdownFilter {
   display: flex;
   align-items: center;
@@ -330,10 +334,18 @@ body {
 
 .rankingTable {
   width: 100%;
-  height: 70%;
+  height: 65%;
   border-collapse: collapse;
   text-align: center;
 }
+
+.ranking-scrollable {
+  margin-top: 8px;
+  max-height: 150px; 
+  overflow-y: auto;
+  border: 1px solid #ddd; 
+}
+
 
 .scrollable {
   max-height: 150px; 
@@ -354,14 +366,19 @@ body {
   width: 15%;
 }
 
-/* tu psuje wyrównanie wysokości etykiety z listą rozwijalną */
-.widget select {
+
+.chart-dropdown {
   margin-top: 10px;
 }
 
-.widget input[type="checkbox"] {
+.checkbox-label{
+  margin-top:25px;
+}
+
+.checkbox-label input[type="checkbox"] {
   accent-color: var(--button-background);
-  margin-top: 10px;
+  margin:0 10px 0 0;
+  vertical-align: -1px;
 }
 
 .widget select option {

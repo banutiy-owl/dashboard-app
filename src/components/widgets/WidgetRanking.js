@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import Widget from "@/components/Widget";
 import OknoRanking from "@/components/okna/OknoRanking";
 import { LanguageContext } from "@/app/layout";
+import RankingTable from "@/components/ranking/RankingTable";
+import RankingSort from "@/components/ranking/RankingSort";
 
 const WidgetRanking = (props) => {
   const { t } = useContext(LanguageContext);
@@ -50,62 +52,13 @@ const WidgetRanking = (props) => {
   return (
     <div className="widgetRanking">
       <Widget title={t.ranking} onClick={openModal}>
-        <div className="widget-ranking">
-          <div className="dropdownFilter">
-            <label htmlFor="filter">{t.sortOffers}:</label>
-            <select
-              id="filter"
-              value={sortMethod}
-              onChange={(e) => setSortMethod(e.target.value)}
-            >
-              <option value="mostFreqPurchased">
-                {t.sortMostFreqPurchased}
-              </option>
-              <option value="leastFreqPurchased">
-                {t.sortLeastFreqPurchased}
-              </option>
-            </select>
-          </div>
-          <div className="scrollable">
-            <table className="rankingTable">
-              <thead>
-                <tr>
-                  <th className="rank-table rank-name">{t.photo}</th>
-                  <th className="rank-table rank-name">{t.name}</th>
-                  <th className="rank-table rank-name">{t.soldItems}</th>
-                  <th className="rank-table rank-name">
-                    {sortMethod === "mostFreqPurchased"
-                      ? t.turnover
-                      : t.viewsCount}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {sortedData.slice(0, 5).map((item, index) => (
-                  <tr key={index}>
-                    <td className="rank-table rank-val">
-                      <img
-                        src={`/${item.photo}`}
-                        alt={item.name}
-                        style={{
-                          width: "2em",
-                          height: "2em",
-                          verticalAlign: "middle",
-                        }}
-                      />
-                    </td>
-                    <td className="rank-table rank-val">{item.name}</td>
-                    <td className="rank-table rank-val">{item.soldItems}</td>
-                    <td className="rank-table rank-val">
-                      {sortMethod === "mostFreqPurchased"
-                        ? item.turnover
-                        : item.viewsCount}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <RankingSort
+          sortMethod={sortMethod}
+          setSortMethod={setSortMethod}
+          t={t}
+        />
+        <div className="ranking-scrollable">
+          <RankingTable sortedData={sortedData} sortMethod={sortMethod} t={t} />
         </div>
       </Widget>
       {isModalOpen && <OknoRanking onClose={closeModal} title={t.ranking} />}

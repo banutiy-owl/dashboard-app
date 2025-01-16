@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
 import { LanguageContext } from "@/app/layout";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const { t, language, toggleLanguage, toggleTheme, currentAccount, changeAccount } =
@@ -7,6 +8,7 @@ const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const accounts = ["Kasia", "Weronika"];
   const dropdownRef = useRef(null);
+  const router = useRouter();
 
   const handleDropdownToggle = () => {
     setDropdownOpen((prevState) => !prevState);
@@ -18,7 +20,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    console.log("Log out");
+    router.push('/login');
   };
 
   useEffect(() => {
@@ -51,7 +53,7 @@ const Header = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               {accounts.map((account, index) => (
-                <li key={index} onClick={() => handleAccountChange(account)}>
+                <li key={index} className="account-change" onClick={() => handleAccountChange(account)}>
                   {account}
                 </li>
               ))}

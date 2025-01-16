@@ -29,7 +29,7 @@ const WidgetOrders = (props) => {
       .catch((error) => {
         console.error("Error fetching dashboard data:", error);
       });
-  }, []);
+  }, [props.username]);
 
   const openModal = (title) => {
     setSelectedTitle(title);

@@ -163,7 +163,7 @@
         "polishTitle": "Ranking Najlepszych Produktów",
         "products": [
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Washing Machine 7kg",
             "polishName": "Pralka 7kg",
             "soldItems": 120,
@@ -171,7 +171,7 @@
             "viewsCount": 160
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "4K TV 55 inches",
             "polishName": "Telewizor 4K 55 cali",
             "soldItems": 110,
@@ -179,7 +179,7 @@
             "viewsCount": 170
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Laptop 13.3 inches",
             "polishName": "Laptop 13,3 cala",
             "soldItems": 95,
@@ -187,7 +187,7 @@
             "viewsCount": 130
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Smartphone 64GB",
             "polishName": "Smartfon 64GB",
             "soldItems": 85,
@@ -195,7 +195,7 @@
             "viewsCount": 140
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Microwave Oven",
             "polishName": "Kuchenka mikrofalowa",
             "soldItems": 75,
@@ -203,7 +203,7 @@
             "viewsCount": 90
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Bluetooth Headphones",
             "polishName": "Słuchawki Bluetooth",
             "soldItems": 60,
@@ -211,7 +211,7 @@
             "viewsCount": 80
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Electric Kettle",
             "polishName": "Czajnik elektryczny",
             "soldItems": 50,
@@ -219,7 +219,7 @@
             "viewsCount": 70
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Cordless Vacuum Cleaner",
             "polishName": "Odkurzacz bezprzewodowy",
             "soldItems": 40,
@@ -227,7 +227,7 @@
             "viewsCount": 60
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Blender 800W",
             "polishName": "Blender 800W",
             "soldItems": 30,
@@ -235,7 +235,7 @@
             "viewsCount": 50
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Toaster",
             "polishName": "Toster",
             "soldItems": 20,
