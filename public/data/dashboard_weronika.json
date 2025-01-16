@@ -161,7 +161,7 @@
         "id": "ranking",
         "products": [
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Telewizor LED",
             "polishName": "Telewizor LED",
             "soldItems": 150,
@@ -169,7 +169,7 @@
             "viewsCount": 200
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Lodówka NoFrost",
             "polishName": "Lodówka NoFrost",
             "soldItems": 130,
@@ -177,7 +177,7 @@
             "viewsCount": 180
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Laptop 15.6 inches",
             "polishName": "Laptop 15,6 cala",
             "soldItems": 100,
@@ -185,7 +185,7 @@
             "viewsCount": 150
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Smartphone 128GB",
             "polishName": "Smartfon 128GB",
             "soldItems": 80,
@@ -193,7 +193,7 @@
             "viewsCount": 120
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Built-in Dishwasher",
             "polishName": "Zmywarka do zabudowy",
             "soldItems": 60,
@@ -201,7 +201,7 @@
             "viewsCount": 110
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Gaming Console",
             "polishName": "Konsola do gier",
             "soldItems": 50,
@@ -209,7 +209,7 @@
             "viewsCount": 100
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Coffee Machine",
             "polishName": "Ekspres do kawy",
             "soldItems": 40,
@@ -217,7 +217,7 @@
             "viewsCount": 90
           },
           {
-            "photo": "example.jpg",
+            "photo": "example1.png",
             "name": "Stick Vacuum Cleaner",
             "polishName": "Odkurzacz pionowy",
             "soldItems": 30,
@@ -225,7 +225,7 @@
             "viewsCount": 80
           },
           {
-            "photo": "example.jpg",
+            "photo": "example3.png",
             "name": "Blender",
             "polishName": "Blender kielichowy",
             "soldItems": 20,
@@ -233,7 +233,7 @@
             "viewsCount": 50
           },
           {
-            "photo": "example.jpg",
+            "photo": "example2.png",
             "name": "Electric Grill",
             "polishName": "Grill elektryczny",
             "soldItems": 10,
