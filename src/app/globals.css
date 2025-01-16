@@ -78,8 +78,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-
-
 .controls:not(:last-child) button {
   margin-right: 10px;
 }
@@ -112,7 +110,7 @@ body {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #fff;
+  background-color: var(--widget-background);
   border: 1px solid var(--border);
   border-radius: 4px;
   list-style: none;
@@ -292,7 +290,6 @@ body {
   gap: 0.5rem;
 }
 
-
 .dropdownFilter {
   display: flex;
   align-items: center;
@@ -328,8 +325,8 @@ body {
   font-weight: bold;
 }
 
-.score-column{
-  width:25%;
+.score-column {
+  width: 25%;
 }
 
 .rankingTable {
@@ -341,16 +338,15 @@ body {
 
 .ranking-scrollable {
   margin-top: 8px;
-  max-height: 150px; 
+  max-height: 150px;
   overflow-y: auto;
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd;
 }
 
-
 .scrollable {
-  max-height: 150px; 
+  max-height: 150px;
   overflow-y: auto;
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd;
 }
 
 .rank-table {
@@ -366,18 +362,17 @@ body {
   width: 15%;
 }
 
-
 .chart-dropdown {
   margin-top: 10px;
 }
 
-.checkbox-label{
-  margin-top:25px;
+.checkbox-label {
+  margin-top: 25px;
 }
 
 .checkbox-label input[type="checkbox"] {
   accent-color: var(--button-background);
-  margin:0 10px 0 0;
+  margin: 0 10px 0 0;
   vertical-align: -1px;
 }
 
